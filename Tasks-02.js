@@ -36,3 +36,32 @@ function min(arr, toReturn) {
   return arr.indexOf(Math.min(...arr));
 }
 
+
+https://www.codewars.com/kata/57f781872e3d8ca2a000007e/train/javascript
+
+function maps(x) {
+  return x.map(x => x * 2);
+}
+
+
+https://www.codewars.com/kata/a-wolf-in-sheeps-clothing/train/javascript?fbclid=IwAR1Q8HgE3vyXUfYCO_8aYRlcTulPc2vz_Bqg7E-kYWcyKc9frJ1gmKaWnVo
+
+function warnTheSheep(queue) {
+  if (queue.indexOf('wolf') === queue.length - 1) {
+    return 'Pls go away and stop eating my sheep';
+  }
+  return `Oi! Sheep number ${(queue.length - queue.indexOf('wolf') - 1)}! You are about to be eaten by a wolf!`;  
+}
+
+
+https://www.codewars.com/kata/find-the-first-non-consecutive-number/train/javascript?fbclid=IwAR1wPTZ8TvqtMG1vv3Ez41FWHgNi_0Br7hNsvx4OIvNCxzP8zuSNjTRFh80
+
+function firstNonConsecutive (arr) {
+  for(let i = 1; i < arr.length; i++) {
+    if (arr[i] + 1 !== arr[i + 1]) {
+      return arr[i + 1];
+    }
+  }
+  return null;
+}
+
