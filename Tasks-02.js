@@ -2,8 +2,7 @@ https://www.codewars.com/kata/convert-a-string-to-an-array/train/javascript?fbcl
 
 
 function stringToArray(string) {
-  const mySplit = string.split(" ", string.length);
-  return mySplit;
+  return string.split(" ");
 }
 
 
@@ -11,7 +10,7 @@ https://www.codewars.com/kata/dna-to-rna-conversion/train/javascript?fbclid=IwAR
 
 
 function DNAtoRNA(dna) {
-  let repl = /T/gi;
+  let repl = /T/g;
   return dna.replace(repl, "U");
 }
 
@@ -39,8 +38,8 @@ function min(arr, toReturn) {
 
 https://www.codewars.com/kata/57f781872e3d8ca2a000007e/train/javascript
 
-function maps(x) {
-  return x.map(x => x * 2);
+function maps(arr) {
+  return arr.map(x => x * 2);
 }
 
 
@@ -58,8 +57,8 @@ https://www.codewars.com/kata/find-the-first-non-consecutive-number/train/javasc
 
 function firstNonConsecutive (arr) {
   for(let i = 1; i < arr.length; i++) {
-    if (arr[i] + 1 !== arr[i + 1]) {
-      return arr[i + 1];
+    if (arr[i - 1] + 1 !== arr[ i ]) {
+      return arr[ i ];
     }
   }
   return null;
